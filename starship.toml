@@ -1,0 +1,151 @@
+format = """
+[](#9A348E)\
+$os\
+$username\
+[](bg:#DA627D fg:#9A348E)\
+$directory\
+[](fg:#DA627D bg:#FCA17D)\
+$git_branch\
+$git_status\
+[](fg:#FCA17D bg:#86BBD8)\
+$cmake\
+$c\
+$cpp\
+$java\
+$lua\
+$python\
+$rust\
+[](fg:#86BBD8 bg:#33658A)\
+$time\
+[  ](#ff0000 bg:#33658A)\
+$battery\
+[ ](fg:#33658A)\
+$fill\
+$cmd_duration\
+\n\
+$character\
+"""
+
+right_format = """
+$status\
+"""
+
+add_newline = false
+
+[fill]
+symbol = ' '
+
+[os]
+style = "bg:#9A348E"
+format = '[Arch  ](bg:#9A348E fg:#00bbff)'
+disabled = false
+
+#[os.symbols]
+#Arch = ''
+
+[username]
+show_always = true
+style_user = "bg:#9A348E"
+style_root = "bg:#9A348E"
+format = '[Paradoxiao ]($style)'
+disabled = false
+
+[directory]
+style = "bg:#DA627D"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = " "
+style = "bg:#FCA17D"
+format = '[ $symbol$branch ]($style)'
+
+[git_status]
+style = "bg:#FCA17D"
+format = '[$all_status$ahead_behind ]($style)'
+use_git_executable = true
+
+[cmake]
+symbol = " "
+style = "bg:#86BBD8 fg:#064F8C"
+format = "[ $symbol]($style)"
+
+[c]
+symbol = " "
+style = "bg:#86BBD8 fg:#00599C"
+format = '[ $symbol]($style)'
+
+[cpp]
+symbol = " "
+style = "bg:#86BBD8 fg:#00599C"
+format = '[ $symbol]($style)'
+disabled = false
+
+[java]
+symbol = " "
+style = "bg:#86BBD8 fg:#FF7800"
+format = '[ $symbol]($style)'
+
+[lua]
+symbol = " "
+style = "bg:#86BBD8 fg:#2C2D72"
+format = '[ $symbol]($style)'
+
+[python]
+symbol = " "
+style = "bg:#86BBD8 fg:#3776AB"
+format = '[ $symbol]($style)'
+
+[rust]
+symbol = " "
+style = "bg:#86BBD8 fg:#000000"
+format = '[ $symbol]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#33658A"
+format = '[[  ]($style)$time]($style)'
+
+[battery]
+disabled = false
+format = '[ $symbol $percentage ](#ffffff bg:#33658A)'
+full_symbol = '[󰁹](#ffffff bg:#33658A)'
+discharging_symbol = '[󰁹](#ffffff bg:#33658A)'
+charging_symbol = '[󰂄](#00ff00 bg:#33658A)'
+[[battery.display]]
+threshold = 100
+
+[cmd_duration]
+disabled = false
+min_time = 0
+show_milliseconds = false
+format = '[](#9A348E)[  $duration ](bg:#9A348E fg:white bold)[](#9A348E)' #
+
+[character]
+vimcmd_symbol = '[ NORMAL ](bg:#82AAFF fg:#000000)[](#82AAFF)'
+vimcmd_replace_one_symbol = '[ REPLACE ](bg:#FF747F fg:#000000)[](#FF747F)'
+vimcmd_replace_symbol = '[ REPLACE_LINE ](bg:#FF747F fg:#000000)[](#FF747F)'
+vimcmd_visual_symbol = '[ VISUAL ](bg:#C099EF fg:#000000)[](#C099EF)'
+success_symbol = '[ INSERT ](bg:#C3E88D fg:#000000)[](#C3E88D)'
+error_symbol = '[ INSERT ](bg:#C3E88D fg:#ff0000)[](#C3E88D)'
+format = '$symbol'
+
+[status]
+disabled = false
+format = """
+$fill\
+$symbol\
+$success_symbol\
+$not_executable_symbol\
+$not_found_symbol\
+$sigint_symbol\
+$signal_symbol\
+"""

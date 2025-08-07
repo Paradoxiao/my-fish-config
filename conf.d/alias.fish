@@ -16,6 +16,7 @@ alias Hybrid="supergfxctl -m Hybrid"
 alias Integrated="supergfxctl -m Integrated"
 alias bing="ping bing.com"
 alias lg="lazygit"
+alias lj="lazyjj"
 # alias Book="rustup doc --book"
 # alias book="xdg-open file:///home/paradoxiao/Codes/Rust/trpl-zh-cn/book/html/index.html"
 #alias yy=yazi

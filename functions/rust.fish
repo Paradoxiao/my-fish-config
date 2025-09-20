@@ -2,13 +2,15 @@ function rust -a project file
     cd ~/Codes/Rust
     if test -n "$project"
         if test -e $project
-            cd $project/src
+            cd $project
         end
     end
     if test -n "$file"
-        if test -e $file
-            nvim $file
-        end
+        # cd src
+        # if test -e $file
+        #     cd ..
+        nvim src/$file
+        # end
     end
 end
 

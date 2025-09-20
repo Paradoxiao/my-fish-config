@@ -9,8 +9,8 @@ function acm -a dir file
         end
     end
     if test -n "$file"
-        if test -e $file
-            nvim $file
-        end
+        # if test -e $file
+        nvim $file
+        # end
     end
 end

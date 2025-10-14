@@ -1,4 +1,4 @@
-function __find_class_file
+function __find_file
     set -l cmd (commandline -xpc)
     set -l dir ""
     if set -q cmd[2]
@@ -12,4 +12,4 @@ function __find_class_file
 end
 
 complete -c acm -n __fish_use_subcommand -a "(ls ~/Codes/CPP/C++/ACM)" -f
-complete -c acm -n '__fish_seen_subcommand_from (ls ~/Codes/CPP/C++/ACM)' -a "(__find_class_file)" -f
+complete -c acm -n '__fish_seen_subcommand_from (ls ~/Codes/CPP/C++/ACM)' -a "(__find_file)" -f

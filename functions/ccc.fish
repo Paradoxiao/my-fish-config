@@ -9,6 +9,7 @@ function ccc -a dir file
             end
         else
             mkdir $dir
+            printf "[*]\nindent_size = 2" >$dir/.editorconfig
             ccc $dir $file
             return
         end

@@ -5,6 +5,7 @@ function wzh -a dir file
             cd $dir
         else
             mkdir $dir
+            printf "[*]\nindent_size = 2" >$dir/.editorconfig
             wzh $dir
         end
     end

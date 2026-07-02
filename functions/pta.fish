@@ -5,6 +5,7 @@ function pta -a dir file
             cd $dir
         else
             mkdir $dir
+            printf "[*]\nindent_size = 2" >$dir/.editorconfig
             pta $dir
         end
     end

@@ -3,6 +3,11 @@ function rust -a project file
     if test -n "$project"
         if test -e $project
             cd $project
+        else
+            cargo new $project
+            printf "[*]\nindent_size = 2" >$project/.editorconfig
+            printf "tab_spaces = 2" >$project/rustfmt.toml
+            rust $project
         end
     end
     if test -n "$file"

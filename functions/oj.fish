@@ -5,6 +5,7 @@ function oj -a dir file
             cd $dir
         else
             mkdir $dir
+            printf "[*]\nindent_size = 2" >$dir/.editorconfig
             oj $dir
         end
     end

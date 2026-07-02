@@ -5,6 +5,7 @@ function typ -a dir file
             cd $dir
         else
             mkdir $dir
+            printf "[*]\nindent_size = 2" >$dir/.editorconfig
             typ $dir
         end
     end

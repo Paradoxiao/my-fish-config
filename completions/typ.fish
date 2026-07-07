@@ -7,9 +7,11 @@ function __find_file
     if test -n "$dir"
         if test -d ~/Codes/Typst/$dir
             ls ~/Codes/Typst/$dir
+        else
+            echo main.typ
         end
     end
 end
 
 complete -c typ -n __fish_use_subcommand -a "(ls ~/Codes/Typst)" -f
-complete -c typ -n '__fish_seen_subcommand_from (ls ~/Codes/Typst)' -a "(__find_file)" -f
+complete -c typ -a "(__find_file)" -f

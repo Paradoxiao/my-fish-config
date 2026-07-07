@@ -7,9 +7,11 @@ function __find_file
     if test -n "$project"
         if test -d ~/Codes/Go/$project
             ls ~/Codes/Go/$project
+        else
+            echo main.go
         end
     end
 end
 
 complete -c golang -n __fish_use_subcommand -a "(ls ~/Codes/Go)" -f
-complete -c golang -n '__fish_seen_subcommand_from (ls ~/Codes/Go)' -a "(__find_file)" -f
+complete -c golang -a "(__find_file)" -f

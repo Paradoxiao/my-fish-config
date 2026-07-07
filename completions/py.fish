@@ -7,9 +7,11 @@ function __find_file
     if test -n "$dir"
         if test -d ~/Codes/Python/$dir
             ls ~/Codes/Python/$dir
+        else
+            echo main.py
         end
     end
 end
 
 complete -c py -n __fish_use_subcommand -a "(ls ~/Codes/Python)" -f
-complete -c py -n '__fish_seen_subcommand_from (ls ~/Codes/Python)' -a "(__find_file)" -f
+complete -c py -a "(__find_file)" -f

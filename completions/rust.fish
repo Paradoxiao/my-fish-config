@@ -7,9 +7,11 @@ function __find_file
     if test -n "$project"
         if test -d ~/Codes/Rust/$project
             ls ~/Codes/Rust/$project/src
+        else
+            echo main.rs
         end
     end
 end
 
 complete -c rust -n __fish_use_subcommand -a "(ls ~/Codes/Rust)" -f
-complete -c rust -n '__fish_seen_subcommand_from (ls ~/Codes/Rust)' -a "(__find_file)" -f
+complete -c rust -a "(__find_file)" -f

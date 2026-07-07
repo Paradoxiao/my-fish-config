@@ -1,17 +1,11 @@
-function __find_file
-    set -l cmd (commandline -xpc)
-    set -l project ""
-    if set -q cmd[2]
-        set project $cmd[2]
-    end
-    if test -n "$project"
-        if test -d ~/Codes/Go/$project
-            ls ~/Codes/Go/$project
-        else
-            echo main.go
-        end
+function __fish_mytool_find_go_file
+    set -l project (commandline -xpc)[2]
+    if test -d ~/Codes/Go/$project
+        ls ~/Codes/Go/$project
+    else
+        echo main.go
     end
 end
 
-complete -c golang -n __fish_use_subcommand -a "(ls ~/Codes/Go)" -f
-complete -c golang -a "(__find_file)" -f
+complete -c golang -n '__fish_is_nth_token 1' -a '(ls ~/Codes/Go)' -f
+complete -c golang -n 'not __fish_is_nth_token 1' -a '(__fish_mytool_find_go_file)' -f

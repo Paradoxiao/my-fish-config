@@ -20,15 +20,15 @@ $time\
 [  ](#ff0000 bg:#33658A)\
 $battery\
 [ ](fg:#33658A)\
-$fill\
-$cmd_duration\
 \n\
 $character\
 """
+# $fill\
+# $cmd_duration\
 
-right_format = """
-$status\
-"""
+# right_format = """
+# $status\
+# """
 
 add_newline = false
 

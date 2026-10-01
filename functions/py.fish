@@ -3,6 +3,9 @@ function py -a dir file
     if test -n "$dir"
         if test -e $dir
             cd $dir
+            if test -e .venv
+                source .venv/bin/activate.fish
+            end
         else
             mkdir $dir
             printf "[tool.ruff]\nindent-width = 2" >$dir/pyproject.toml

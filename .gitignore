@@ -1,1 +1,7 @@
-fish_variables
+/completions/*
+!/completions/golang.fish
+!/completions/ja.fish
+!/completions/py.fish
+!/completions/rust.fish
+!/completions/typ.fish
+/fish_variables

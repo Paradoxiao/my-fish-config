@@ -1,4 +1,6 @@
 /completions/*
+!/completions/c.fish
+!/completions/ccc.fish
 !/completions/golang.fish
 !/completions/ja.fish
 !/completions/py.fish

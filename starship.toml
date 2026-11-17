@@ -54,9 +54,10 @@ disabled = false
 
 [directory]
 style = "bg:#DA627D"
-format = "[ $path ]($style)"
+format = "[ $read_only$path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
+read_only = " "
 
 [directory.substitutions]
 "Documents" = "󰈙 "

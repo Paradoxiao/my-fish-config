@@ -11,6 +11,5 @@ set -gx EDITOR nvim
 # set -gx TLDR_LANGUAGE zh
 set -gx RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
 set -gx RUSTUP_UPDATE_ROOT https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
-set -gxa PATH $HOME/.local/bin
-set -gxa GOPROXY https://goproxy.io,direct
+set -gx GOPROXY https://goproxy.io,direct
 #set -gx OLLAMA_MODELS /home/paradoxiao/Win/Pro/AI/Ollama/.models

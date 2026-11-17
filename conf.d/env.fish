@@ -8,6 +8,7 @@ set -gx GLFW_IM_MODULE fcitx5
 # set -gx GTK_IM_MODULE fcitx
 # set -gx QT_IM_MODULE fcitx
 set -gx EDITOR nvim
+set -gx MANPAGER nvim +Man!
 # set -gx TLDR_LANGUAGE zh
 set -gx RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
 set -gx RUSTUP_UPDATE_ROOT https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
